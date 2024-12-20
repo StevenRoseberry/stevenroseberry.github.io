@@ -8,47 +8,108 @@
 }
 
 .principal-header {
-    background-color: rgb(78, 78, 78);
-    padding: 5px 5px;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(38, 152, 127);
+    padding-top: 1px;
+    padding-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-width: 10px;
+    border-bottom-color: #125849;
+}
+
+.principal-nom {
+    font-size: 56px;
+    font-weight: bold;
+    font-family: "monospace", Tahoma, monospace;
+    color: #000000;
+    text-align: center;
+    margin-top: 160px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 .principal-body {
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(146, 225, 208);
 }
 
 .button-reseaux {
     text-decoration: none;
-    margin-left: 35px;
+    margin-left: 20px;
     color: #ffffff;
-    background-color: #10b274;
+    background-color: #e09892;
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color: #181717;
     border-radius: 8px;
-    padding: 5px 10px;
-    font-size: 20px;
+    padding: 10px 15px;
+    font-size: 25px;
     font-weight: bold;
     font-family: "monospace", Tahoma, monospace;
-    border-style: none;
+}
+
+.button-apropos {
+    text-decoration: none;
+    margin-inline: 45%;
+    color: #ffffff;
+    background-color: #e09892;
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color: #181717;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "monospace", Tahoma, monospace;
 }
 
 .button-home {
     text-decoration: none;
-    margin-left: 35px;
+    margin-left: 20px;
     color: #ffffff;
-    background-color: #8d20c4;
+    background-color: #7658d3;
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color: #181717;
     border-radius: 8px;
-    padding: 5px 10px;
-    font-size: 20px;
+    padding: 10px 15px;
+    font-size: 25px;
     font-weight: bold;
     font-family: "monospace", Tahoma, monospace;
-    border-style: none;
 }
+
+.button-container {
+    display: flex; /* Aligne les boutons côte à côte */
+    gap: 20px; /* Ajoute un espacement entre les boutons */
+    justify-content: flex-start; /* Aligne les boutons à gauche */
+    align-items: center; /* Centrage vertical */
+}
+.github-button {
+    padding: 5px 5px;
+    border-radius: 160px;
+    border-color: rgb(0, 0, 0);
+    border-width: 4px;
+    border-style: solid;
+    margin-top: 15px;
+    margin-left: 5px;
+    text-decoration: none;
+}
+.github-button:hover {
+    cursor: pointer;
+}
+
 
 .instagram-button {
     padding: 5px 5px;
-    border-radius: 150px;
+    border-radius: 160px;
+    text-decoration: none;
     border-color: rgba(0, 0, 0, 0.5);
     border-width: 4px;
     border-style: solid;
-    margin-top: 25px;
+    margin-top: 15px;
     margin-left: 25px;
 
     background: radial-gradient(circle at 10% 105%,
