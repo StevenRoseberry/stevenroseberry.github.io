@@ -123,9 +123,6 @@ function animateNoise() {
     requestAnimationFrame(animateNoise);
 }
 
-// Transition fluide pour le fond
-document.body.style.transition = "background-image 0.2s ease-out";
-document.body.style.transition = "background 0.2s ease-out";
 
 // Écouteur de mouvement pour le curseur
 document.addEventListener("mousemove", (event) => {

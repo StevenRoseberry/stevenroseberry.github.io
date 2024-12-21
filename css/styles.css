@@ -1,8 +1,12 @@
+
 :root {
     --main-color: #000000;
     --secondary-color: #ffffff;
     --background-color: #000000;
+    font-family: "monospace", Tahoma, monospace;
 }
+
+/* Primary color variables for theme styling */
 
 #theme-switch {
     height: 50px;
@@ -17,15 +21,19 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Pour le bouton */
+    transition: background-color 0.3s ease; /* Temps d'animation du color-theme */
 }
 
+/* Styles for the theme switch button */
+
 #theme-switch svg {
-    display: none; /* Les icônes sont masquées par défaut */
+    display: none; /* Icons hidden by default */
     width: 24px;
     height: 24px;
     fill: var(--secondary-color);
 }
+
+/* SVG icon settings for theme switcher */
 
 #theme-switch svg.active {
     display: block; /* Active l'icône correspondante */
@@ -37,7 +45,6 @@
     font-size: 32px;
     color: var(--secondary-color);
     font-weight: bold;
-    font-family: "monospace", Tahoma, monospace;
 }
 
 .principal-header {
@@ -57,7 +64,6 @@
 .principal-nom {
     font-size: 90px;
     font-weight: bold;
-    font-family: "monospace", Tahoma, monospace;
     color: var(--main-color);
     display: flex;
     justify-content: center;
@@ -71,9 +77,8 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     background-color: var(--background-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.5s ease;
     color: var(--secondary-color);
-    font-family: "monospace", Tahoma, monospace;
 }
 
 .index-body {
@@ -87,95 +92,92 @@ body {
 
 }
 
-    .header-button-main {
+.header-button-main {
+    text-decoration: none;
+    margin-left: 20px;
+    color: var(--secondary-color);
+    background-color: rgba(0, 0, 0, 0.31);
+    outline: var(--secondary-color) solid 3px;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.button-apropos {
+    text-decoration: none;
+    color: var(--secondary-color);
+    background-color: var(--main-color);
+    border-radius: 2px;
+    padding: 15px 55px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button-home {
+    text-decoration: none;
+    margin-left: 20px;
+    color: var(--secondary-color);
+    background-color: #7658d3;
+    outline: #181717 solid 3px;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row; /* Aligne les éléments verticalement */
+    justify-content: left; /* Centre verticalement */
+    align-items: normal;
+    margin-top: 75px; /* Ajoute un espacement pour compenser la hauteur du header */
+    height: 100vh; /* Hauteur de la fenêtre */
+    width: 100%; /* Largeur complète */
+
+
+    .github-button {
+        padding: 5px 5px;
+        border-radius: 160px;
+        border-color: rgb(0, 0, 0);
+        border-width: 4px;
+        border-style: solid;
+        margin-top: 25px;
+        margin-left: 25px;
         text-decoration: none;
-        margin-left: 20px;
-        color: var(--secondary-color);
-        background-color: rgba(0, 0, 0, 0.31);
-        outline:var(--secondary-color) solid 3px;
-        border-radius: 8px;
-        padding: 10px 15px;
-        font-size: 25px;
-        font-weight: bold;
-        font-family: "monospace", Tahoma, monospace;
     }
 
-    .button-apropos {
+    .github-button:hover {
+        cursor: pointer;
+    }
+
+
+    .instagram-button {
+        padding: 5px 5px;
+        border-radius: 160px;
         text-decoration: none;
-        color: var(--secondary-color);
-        background-color: var(--main-color);
-        border-radius: 2px;
-        padding: 15px 55px;
-        font-size: 20px;
-        font-weight: bold;
-        font-family: "monospace", Tahoma, monospace;
+        border-color: rgba(0, 0, 0, 0.5);
+        border-width: 4px;
+        border-style: solid;
+        margin-top: 25px;
+        margin-left: 25px;
+
+        background: radial-gradient(circle at 10% 105%,
+        #fdf497 0%,
+        #f5be6b 15%,
+        #fd5949 45%,
+        #d6249f 70%,
+        #6801a3 95%);
+        background-size: 150% 125%;
+        background-position: center;
+        background-position-x: 90%;
+        background-repeat: no-repeat;
+        transition: background-position-x 0.25s linear;
     }
 
-    .button-home {
-        text-decoration: none;
-        margin-left: 20px;
-        color: var(--secondary-color);
-        background-color: #7658d3;
-        outline: #181717 solid 3px;
-        border-radius: 8px;
-        padding: 10px 15px;
-        font-size: 25px;
-        font-weight: bold;
-        font-family: "monospace", Tahoma, monospace;
+
+    .instagram-button:hover {
+        background-position-x: 10%;
+        cursor: pointer;
     }
-
-    .button-container {
-        display: flex;
-        flex-direction: row; /* Aligne les éléments verticalement */
-        justify-content: left; /* Centre verticalement */
-        align-items: normal;
-        margin-top: 75px; /* Ajoute un espacement pour compenser la hauteur du header */
-        height: 100vh; /* Hauteur de la fenêtre */
-        width: 100%; /* Largeur complète */
-
-
-        .github-button {
-            padding: 5px 5px;
-            border-radius: 160px;
-            border-color: rgb(0, 0, 0);
-            border-width: 4px;
-            border-style: solid;
-            margin-top: 25px;
-            margin-left: 25px;
-            text-decoration: none;
-        }
-
-        .github-button:hover {
-            cursor: pointer;
-        }
-
-
-        .instagram-button {
-            padding: 5px 5px;
-            border-radius: 160px;
-            text-decoration: none;
-            border-color: rgba(0, 0, 0, 0.5);
-            border-width: 4px;
-            border-style: solid;
-            margin-top: 25px;
-            margin-left: 25px;
-
-            background: radial-gradient(circle at 10% 105%,
-            #fdf497 0%,
-            #f5be6b 15%,
-            #fd5949 45%,
-            #d6249f 70%,
-            #6801a3 95%);
-            background-size: 150% 125%;
-            background-position: center;
-            background-position-x: 90%;
-            background-repeat: no-repeat;
-            transition: background-position-x 0.25s linear;
-        }
-
-
-        .instagram-button:hover {
-            background-position-x: 10%;
-            cursor: pointer;
-        }
-    }
+}
