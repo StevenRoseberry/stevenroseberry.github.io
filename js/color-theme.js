@@ -14,9 +14,13 @@ if (isDarkTheme === null) {
 if (isDarkTheme) {
     moonIcon.classList.add("active");
     document.documentElement.style.setProperty("--background-color", "#000000");
+    document.documentElement.style.setProperty("--main-color", "#000000");
+    document.documentElement.style.setProperty("--secondary-color", "#ffffff");
 } else {
     sunIcon.classList.add("active");
     document.documentElement.style.setProperty("--background-color", "#FFFFFF");
+    document.documentElement.style.setProperty("--main-color", "#ffffff");
+    document.documentElement.style.setProperty("--secondary-color", "#000000");
 }
 
 // Écouteur d'événement pour le changement de thème
