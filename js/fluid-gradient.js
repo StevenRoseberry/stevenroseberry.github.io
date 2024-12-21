@@ -162,6 +162,7 @@ document.body.style.backgroundImage = `
     requestAnimationFrame(animateGradients);
 }
 
+
 // Lancer les animations
 animateNoise();
 animateGradients();

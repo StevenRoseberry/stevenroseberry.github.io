@@ -84,6 +84,7 @@ body {
     justify-content: flex-start; /* Aligne les boutons à gauche */
     align-items: center; /* Centrage vertical */
 }
+
 .github-button {
     padding: 5px 5px;
     border-radius: 160px;
@@ -94,6 +95,7 @@ body {
     margin-left: 5px;
     text-decoration: none;
 }
+
 .github-button:hover {
     cursor: pointer;
 }
@@ -119,11 +121,11 @@ body {
     background-position: center;
     background-position-x: 90%;
     background-repeat: no-repeat;
-    transition:
-            background-position-x 0.25s linear;
+    transition: background-position-x 0.25s linear;
 }
-.instagram-button:hover
-{
+
+
+.instagram-button:hover {
     background-position-x: 10%;
     cursor: pointer;
 }
