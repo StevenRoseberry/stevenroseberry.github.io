@@ -1,8 +1,41 @@
+:root {
+    --main-color: #000000;
+    --secondary-color: #ffffff;
+    --background-color: #000000;
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Pour le bouton */
+}
+
+#theme-switch svg {
+    display: none; /* Les icônes sont masquées par défaut */
+    width: 24px;
+    height: 24px;
+    fill: var(--secondary-color);
+}
+
+#theme-switch svg.active {
+    display: block; /* Active l'icône correspondante */
+}
+
 .titre {
     text-align: left;
     margin-left: 25px;
     font-size: 32px;
-    color: white;
+    color: var(--secondary-color);
     font-weight: bold;
     font-family: "monospace", Tahoma, monospace;
 }
@@ -13,119 +46,136 @@
     background-color: rgba(0, 0, 0, 0.73);
     padding-top: 1px;
     padding-bottom: 5px;
+    position: fixed; /* Fixe le header en haut de la fenêtre */
+    top: 0; /* Positionne précisément en haut */
+    z-index: 10; /* S'assure que le header reste visible au-dessus des autres contenus */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .principal-nom {
     font-size: 90px;
     font-weight: bold;
     font-family: "monospace", Tahoma, monospace;
-    color: #000000;
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 220px;
 }
 
 body {
     margin: 0;
     padding: 0;
-}
-
-.principal-body {
     background-repeat: no-repeat;
     height: 100vh;
-    background-color: black;
-}
-
-.header-button-main {
-    text-decoration: none;
-    margin-left: 20px;
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.31);
-    outline: #ffffff solid 3px;
-    border-radius: 8px;
-    padding: 10px 15px;
-    font-size: 25px;
-    font-weight: bold;
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: var(--secondary-color);
     font-family: "monospace", Tahoma, monospace;
 }
 
-.button-apropos {
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #000000;
-    border-radius: 2px;
-    padding: 15px 55px;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: "monospace", Tahoma, monospace;
-
-    /* Code pour le centrage */
-    position: absolute; /* Ou fixed si vous voulez qu'il reste centré même en scrollant */
-    top: 50%; /* Centre verticalement par rapport à la page */
-    left: 50%; /* Centre horizontalement */
-    transform: translate(-50%, -50%); /* Compense le décalage des coordonnées */
+.index-body {
+    display: flex; /* Utilise flex pour centrer les éléments de la page */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
 }
 
-.button-home {
-    text-decoration: none;
-    margin-left: 20px;
-    color: #ffffff;
-    background-color: #7658d3;
-    outline: #181717 solid 3px;
-    border-radius: 8px;
-    padding: 10px 15px;
-    font-size: 25px;
-    font-weight: bold;
-    font-family: "monospace", Tahoma, monospace;
+.reseaux-sociaux-body {
+
 }
 
-.button-container {
-    display: flex; /* Aligne les boutons côte à côte */
-    gap: 20px; /* Ajoute un espacement entre les boutons */
-    justify-content: flex-start; /* Aligne les boutons à gauche */
-    align-items: center; /* Centrage vertical */
-}
+    .header-button-main {
+        text-decoration: none;
+        margin-left: 20px;
+        color: var(--secondary-color);
+        background-color: rgba(0, 0, 0, 0.31);
+        outline:var(--secondary-color) solid 3px;
+        border-radius: 8px;
+        padding: 10px 15px;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: "monospace", Tahoma, monospace;
+    }
 
-.github-button {
-    padding: 5px 5px;
-    border-radius: 160px;
-    border-color: rgb(0, 0, 0);
-    border-width: 4px;
-    border-style: solid;
-    margin-top: 15px;
-    margin-left: 5px;
-    text-decoration: none;
-}
+    .button-apropos {
+        text-decoration: none;
+        color: var(--secondary-color);
+        background-color: var(--main-color);
+        border-radius: 2px;
+        padding: 15px 55px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "monospace", Tahoma, monospace;
+    }
 
-.github-button:hover {
-    cursor: pointer;
-}
+    .button-home {
+        text-decoration: none;
+        margin-left: 20px;
+        color: var(--secondary-color);
+        background-color: #7658d3;
+        outline: #181717 solid 3px;
+        border-radius: 8px;
+        padding: 10px 15px;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: "monospace", Tahoma, monospace;
+    }
 
-
-.instagram-button {
-    padding: 5px 5px;
-    border-radius: 160px;
-    text-decoration: none;
-    border-color: rgba(0, 0, 0, 0.5);
-    border-width: 4px;
-    border-style: solid;
-    margin-top: 15px;
-    margin-left: 25px;
-
-    background: radial-gradient(circle at 10% 105%,
-    #fdf497 0%,
-    #f5be6b 15%,
-    #fd5949 45%,
-    #d6249f 70%,
-    #6801a3 95%);
-    background-size: 150% 125%;
-    background-position: center;
-    background-position-x: 90%;
-    background-repeat: no-repeat;
-    transition: background-position-x 0.25s linear;
-}
+    .button-container {
+        display: flex;
+        flex-direction: row; /* Aligne les éléments verticalement */
+        justify-content: left; /* Centre verticalement */
+        align-items: normal;
+        margin-top: 75px; /* Ajoute un espacement pour compenser la hauteur du header */
+        height: 100vh; /* Hauteur de la fenêtre */
+        width: 100%; /* Largeur complète */
 
 
-.instagram-button:hover {
-    background-position-x: 10%;
-    cursor: pointer;
-}
+        .github-button {
+            padding: 5px 5px;
+            border-radius: 160px;
+            border-color: rgb(0, 0, 0);
+            border-width: 4px;
+            border-style: solid;
+            margin-top: 25px;
+            margin-left: 25px;
+            text-decoration: none;
+        }
+
+        .github-button:hover {
+            cursor: pointer;
+        }
+
+
+        .instagram-button {
+            padding: 5px 5px;
+            border-radius: 160px;
+            text-decoration: none;
+            border-color: rgba(0, 0, 0, 0.5);
+            border-width: 4px;
+            border-style: solid;
+            margin-top: 25px;
+            margin-left: 25px;
+
+            background: radial-gradient(circle at 10% 105%,
+            #fdf497 0%,
+            #f5be6b 15%,
+            #fd5949 45%,
+            #d6249f 70%,
+            #6801a3 95%);
+            background-size: 150% 125%;
+            background-position: center;
+            background-position-x: 90%;
+            background-repeat: no-repeat;
+            transition: background-position-x 0.25s linear;
+        }
+
+
+        .instagram-button:hover {
+            background-position-x: 10%;
+            cursor: pointer;
+        }
+    }
