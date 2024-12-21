@@ -10,21 +10,18 @@
 .principal-header {
     width: 100%;
     margin: 0;
-    background-color: rgb(38, 152, 127);
+    background-color: rgba(0, 0, 0, 0.73);
     padding-top: 1px;
-    padding-bottom: 2px;
-    border-bottom-style: solid;
-    border-bottom-width: 10px;
-    border-bottom-color: #125849;
+    padding-bottom: 5px;
 }
 
 .principal-nom {
-    font-size: 56px;
+    font-size: 90px;
     font-weight: bold;
     font-family: "monospace", Tahoma, monospace;
     color: #000000;
     text-align: center;
-    margin-top: 160px;
+    margin-top: 220px;
 }
 
 body {
@@ -33,17 +30,17 @@ body {
 }
 
 .principal-body {
-    background-color: rgb(146, 225, 208);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: black;
 }
 
-.button-reseaux {
+.header-button-main {
     text-decoration: none;
     margin-left: 20px;
     color: #ffffff;
-    background-color: #e09892;
-    outline-style: solid;
-    outline-width: 3px;
-    outline-color: #181717;
+    background-color: rgba(0, 0, 0, 0.31);
+    outline: #ffffff solid 3px;
     border-radius: 8px;
     padding: 10px 15px;
     font-size: 25px;
@@ -53,17 +50,19 @@ body {
 
 .button-apropos {
     text-decoration: none;
-    margin-inline: 45%;
     color: #ffffff;
-    background-color: #e09892;
-    outline-style: solid;
-    outline-width: 3px;
-    outline-color: #181717;
-    border-radius: 8px;
-    padding: 10px 15px;
-    font-size: 25px;
+    background-color: #000000;
+    border-radius: 2px;
+    padding: 15px 55px;
+    font-size: 20px;
     font-weight: bold;
     font-family: "monospace", Tahoma, monospace;
+
+    /* Code pour le centrage */
+    position: absolute; /* Ou fixed si vous voulez qu'il reste centré même en scrollant */
+    top: 50%; /* Centre verticalement par rapport à la page */
+    left: 50%; /* Centre horizontalement */
+    transform: translate(-50%, -50%); /* Compense le décalage des coordonnées */
 }
 
 .button-home {
@@ -71,9 +70,7 @@ body {
     margin-left: 20px;
     color: #ffffff;
     background-color: #7658d3;
-    outline-style: solid;
-    outline-width: 3px;
-    outline-color: #181717;
+    outline: #181717 solid 3px;
     border-radius: 8px;
     padding: 10px 15px;
     font-size: 25px;
