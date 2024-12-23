@@ -12,13 +12,13 @@ const grainyNoise = document.createElement("canvas");
 grainyNoise.style.position = "fixed";
 grainyNoise.style.top = 0;
 grainyNoise.style.left = 0;
-grainyNoise.style.width = "100%";
-grainyNoise.style.height = "100%";
+grainyNoise.style.width = "200%";
+grainyNoise.style.height = "200%";
 grainyNoise.style.pointerEvents = "none"; // Ignorer les clics
 grainyNoise.classList.add('exclude-noise');
 grainyNoise.style.zIndex = "-1"; // Place noise behind other elements
 grainyNoise.style.mixBlendMode = "overlay"; // Mélange le bruit avec les gradients
-grainyNoise.style.opacity = "0.2"; // Ajustez l'opacité pour plus ou moins de bruit
+grainyNoise.style.opacity = "0.25"; // Ajustez l'opacité pour plus ou moins de bruit
 document.body.appendChild(grainyNoise);
 document.querySelectorAll('.social-buttons').forEach(button => {
     button.classList.add('exclude-noise');

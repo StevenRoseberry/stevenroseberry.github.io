@@ -14,13 +14,13 @@ if (isDarkTheme === null) {
 if (isDarkTheme) {
     moonIcon.classList.add("active");
     document.documentElement.style.setProperty("--background-color", "#000000");
-    document.documentElement.style.setProperty("--main-color", "#000000");
-    document.documentElement.style.setProperty("--secondary-color", "#ffffff");
+    document.documentElement.style.setProperty("--text-color", "#FFFFFF");
+    document.documentElement.style.setProperty("--accent-color", "#000000");
 } else {
     sunIcon.classList.add("active");
     document.documentElement.style.setProperty("--background-color", "#FFFFFF");
-    document.documentElement.style.setProperty("--main-color", "#ffffff");
-    document.documentElement.style.setProperty("--secondary-color", "#000000");
+    document.documentElement.style.setProperty("--text-color", "#000000");
+    document.documentElement.style.setProperty("--accent-color", "#FFFFFF");
 }
 
 // Écouteur d'événement pour le changement de thème
@@ -32,7 +32,17 @@ localStorage.setItem('isDarkTheme', isDarkTheme);
     // Update the background color
     document.documentElement.style.setProperty(
         "--background-color",
-        isDarkTheme ? "#000000" : "#FFFFFF"
+        isDarkTheme ? "#000000" : "#FFFFFF",
+    );
+
+    document.documentElement.style.setProperty(
+        "--text-color",
+        isDarkTheme ? "#ffffff" : "#000000",
+    );
+
+    document.documentElement.style.setProperty(
+        "--accent-color",
+        isDarkTheme ? "#000000" : "#ffffff",
     );
 
     // Update icons

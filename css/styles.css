@@ -2,7 +2,10 @@
 :root {
     --main-color: #000000;
     --secondary-color: #ffffff;
-    --background-color: #ff0000;
+    --background-color: #000000;
+
+    --text-color: #ffffff;
+    --accent-color: #000000;
     font-family: "monospace", Tahoma, monospace;
 }
 
@@ -42,14 +45,6 @@
     display: block; /* Active l'icône correspondante */
 }
 
-.titre {
-    text-align: left;
-    margin-left: 25px;
-    font-size: 32px;
-    color: var(--secondary-color);
-    font-weight: bold;
-}
-
 .principal-header {
     width: 100%;
     margin: 0;
@@ -80,7 +75,7 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     background-color: var(--background-color);
-    transition: background-color 0.5s ease;
+    transition: background-color 0.7s ease, text-color 0.7s ease, accent-color 0.7s ease;
     color: var(--secondary-color);
 }
 
@@ -112,9 +107,10 @@ body {
     color: var(--secondary-color);
     background-color: var(--main-color);
     border-radius: 2px;
-    padding: 15px 55px;
+    padding: 15px 60px;
     font-size: 20px;
     font-weight: bold;
+    margin-top: -40px;
 }
 
 .button-home {
@@ -183,4 +179,27 @@ body {
         background-position-x: 10%;
         cursor: pointer;
     }
+
+}
+
+.a-propos-titre {
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    text-align: center; /* Centre le texte */
+
+}
+
+.a-propos-text {
+    font-size: 24px;
+    font-weight: normal; /* Mettez le texte en normal pour une distinction avec le titre */
+    color: var(--text-color);
+    margin-top: 20px; /* Espace entre le titre et le paragraphe */
+    line-height: 1.6; /* Espacement des lignes pour meilleures lisibilité */
+    max-width: 800px; /* Limite la largeur du texte pour un aspect propre */
+    text-align: center; /* Centre le paragraphe */
 }
